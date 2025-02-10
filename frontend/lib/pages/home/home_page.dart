@@ -2,16 +2,16 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:genio_card/components/UpperBar.dart';
-import 'package:genio_card/pages/home/home_widgets/SideBar.dart';
-import 'package:genio_card/pages/home/home_widgets/UserCard.dart';
-import 'package:genio_card/pages/login/SignUp.dart';
-import 'package:genio_card/provider/UserNameProvider.dart';
-import 'package:genio_card/theme/ThemeHelper.dart';
+import 'package:genio_card/components/upper_bar.dart';
+import 'package:genio_card/pages/home/home_widgets/side_bar.dart';
+import 'package:genio_card/pages/home/home_widgets/user_card.dart';
+import 'package:genio_card/pages/login/sign_up.dart';
+import 'package:genio_card/provider/user_name_provider.dart';
+import 'package:genio_card/theme/theme_helper.dart';
 import 'package:intl/intl.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
-import 'home_widgets/FloatingButton.dart';
+import 'home_widgets/floating_button.dart';
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});

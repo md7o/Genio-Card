@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme/ThemeHelper.dart';
-import '../../../utils/PageNavigator.dart';
-import '../../generate_file_widget/GenerateFilePage.dart';
+import '../../../theme/theme_helper.dart';
+import '../../../utils/page_navigator.dart';
+import '../../generate_file_widget/generate_file_page.dart';
 
 class FloatingButton extends StatelessWidget {
   const FloatingButton({super.key});

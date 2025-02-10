@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:genio_card/theme/ThemeHelper.dart';
+import 'package:genio_card/theme/theme_helper.dart';
 
 class AuthTextField extends StatelessWidget {
   final String titleLabel;

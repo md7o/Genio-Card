@@ -3,16 +3,17 @@ import 'package:file_picker/file_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:genio_card/pages/home/HomePage.dart';
-import 'package:genio_card/provider/questionsDataProvider.dart';
-import 'package:genio_card/theme/RightCheck.dart';
-import 'package:genio_card/theme/ThemeHelper.dart';
+import 'package:genio_card/pages/home/home_page.dart';
+import 'package:genio_card/provider/questions_data_provider.dart';
+import 'package:genio_card/theme/right_check.dart';
+import 'package:genio_card/theme/theme_helper.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
-import 'generate_file_widgets/OptionForm.dart';
+import '../../provider/default_value_provider.dart';
+import 'generate_file_widgets/option_form.dart';
 
 class GenerateFilePage extends ConsumerStatefulWidget {
   const GenerateFilePage({super.key});
@@ -40,7 +41,7 @@ class _GenerateFilePageState extends ConsumerState<GenerateFilePage> {
     }
   }
 
-  Future<void> createQuestions(BuildContext context) async {
+  Future<void> createQuestions(context) async {
     if (filePath == null) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Please select a PDF file first.")),
@@ -106,7 +107,7 @@ class _GenerateFilePageState extends ConsumerState<GenerateFilePage> {
           }),
         );
 
-        ref.read(questionsProvider.notifier).state = fetchedQuestions;
+        ref.read(questionsProvider.notifier).setQuestions(fetchedQuestions);
 
         if (mounted) {
           setState(() {

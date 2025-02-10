@@ -1,13 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:genio_card/pages/home/HomePage.dart';
+import 'package:genio_card/pages/home/home_page.dart';
 import 'package:genio_card/pages/login/Login.dart';
-import 'package:genio_card/provider/UserNameProvider.dart';
-import 'package:genio_card/theme/ThemeHelper.dart';
+import 'package:genio_card/provider/user_name_provider.dart';
+import 'package:genio_card/theme/theme_helper.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import '../../components/form/AuthTextField.dart';
+import '../../components/form/auth_text_field.dart';
 
 class SignUp extends ConsumerStatefulWidget {
   const SignUp({super.key});

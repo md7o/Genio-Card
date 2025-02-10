@@ -2,13 +2,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive/hive.dart';
-import '../../../provider/ThemeProvider.dart';
-import '../../../provider/UserNameProvider.dart';
-import '../../../theme/ThemeHelper.dart';
-import '../../../utils/PageNavigator.dart';
-import '../../generate_file_widget/GenerateFilePage.dart';
-import '../../login/Login.dart';
-import '../../login/SignUp.dart';
+import '../../../provider/theme_provider.dart';
+import '../../../provider/user_name_provider.dart';
+import '../../../theme/theme_helper.dart';
+import '../../../utils/page_navigator.dart';
+import '../../generate_file_widget/generate_file_page.dart';
+import '../../login/login.dart';
+import '../../login/sign_up.dart';
 
 class SideBar extends ConsumerStatefulWidget {
   const SideBar({super.key});
@@ -120,6 +120,8 @@ class _SideBarState extends ConsumerState<SideBar> {
                 ),
                 onTap: () async {
                   await FirebaseAuth.instance.signOut();
+
+                  if (!mounted) return;
 
                   Navigator.pushReplacement(
                     context,

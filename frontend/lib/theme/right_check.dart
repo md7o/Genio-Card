@@ -4,10 +4,10 @@ class AnimatedCheck extends StatefulWidget {
   const AnimatedCheck({super.key});
 
   @override
-  _AnimatedCheckState createState() => _AnimatedCheckState();
+  AnimatedCheckState createState() => AnimatedCheckState();
 }
 
-class _AnimatedCheckState extends State<AnimatedCheck> with TickerProviderStateMixin {
+class AnimatedCheckState extends State<AnimatedCheck> with TickerProviderStateMixin {
   late final AnimationController scaleController;
   late final AnimationController checkController;
   late final Animation<double> scaleAnimation;

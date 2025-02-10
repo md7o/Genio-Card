@@ -8,10 +8,6 @@ class QuestionNotifier extends StateNotifier<List<Map<String, String>>> {
   QuestionNotifier() : super([]);
 
   void setQuestions(List<Map<String, String>> questions) {
-    questions;
+    state = questions;
   }
 }
-
-final numQuestionsProvider = StateProvider<String>((ref) => '1');
-final languageProvider = StateProvider<String>((ref) => 'English');
-final difficultyProvider = StateProvider<String>((ref) => 'Simple');

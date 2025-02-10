@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:genio_card/theme/CustomColors.dart';
+import 'package:genio_card/theme/custom_colors.dart';
 
 class ThemeHelper {
   static Color getCardColor(BuildContext context) {

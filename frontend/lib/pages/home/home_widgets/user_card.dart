@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import '../../../theme/ThemeHelper.dart';
-import '../../questions/Questions_page.dart';
+import '../../../theme/theme_helper.dart';
+import '../../questions/questions_page.dart';
 
 class UserCard extends StatefulWidget {
   final List<Map<String, dynamic>> userList;

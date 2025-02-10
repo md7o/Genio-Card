@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_flip_card/controllers/flip_card_controllers.dart';
-import 'package:flutter_flip_card/flipcard/gesture_flip_card.dart';
 import 'package:flutter_flip_card/flutter_flip_card.dart';
-import 'package:genio_card/theme/ThemeHelper.dart';
+import 'package:genio_card/theme/theme_helper.dart';
 
 class QuestionsPage extends StatelessWidget {
   final List<Map<String, dynamic>> quesAndAnsw;
